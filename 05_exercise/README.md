@@ -6,3 +6,5 @@ Output: Wednesday
 
 Estimated time: 15 minutes <br>
 Total points: 15 
+
+const names = 
