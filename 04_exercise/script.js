@@ -36,8 +36,6 @@ let books = [
     },
 ];
 
-console.log(books);
-
 function addBook(e) {
     e.preventDefault();
     books.push(
@@ -49,9 +47,25 @@ function addBook(e) {
         }
     )
 } 
-// // program to sort array by property title
-// function compareBooks (book1, book2) {
-//      return book1.title - book2.title;
-// };
 
-// console.log(books.sort(compareBooks));
+
+// // program to sort array by property title
+function compareBooks (book1, book2) {
+     return book1.title - book2.title;
+};
+
+const comparedBooks = books.sort(compareBooks));
+
+function template (books) {
+    books.map( book => {
+        return `
+        <p>title: ${book.title}</p>
+        <p>author: ${book.author}</p>
+        <p>price: ${book.price}</p>
+        <p>status: ${book.status}</p>
+        `
+    })
+}
+
+document.getElementById("book-.list").innerHTML = 
+template(compareBooks);
